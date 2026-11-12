@@ -94,15 +94,6 @@ Contact JSON : `name`, `email`, `subject`, `message`, `website` vide. Codes prin
 - `sql/01-schema.sql`, `sql/02-seed.sql` : création et alimentation.
 - `docs/` : dossier, veille, résultats et recette.
 
-## Déploiement HTTPS et GitHub
-
-Consulter `docs/DEPLOIEMENT.md`. L'hébergement doit exécuter Node.js et MySQL : un hébergement statique seul ne suffit pas.
-
-Le jeu fourni est intégré. Avant remise, ajouter ici les deux liens vérifiés :
-
-- Dépôt GitHub : **à renseigner après publication**.
-- Site HTTPS : **à renseigner après déploiement**.
-
 ## Identité et droits
 
 Logo et favicon : documents pédagogiques fournis ; vérifier les droits pour un usage public hors exercice. Illustrations SVG : créées pour le projet. Graphik : fournir les fichiers et les droits correspondants. Ne jamais versionner `.env`, des mots de passe ou des données privées.
