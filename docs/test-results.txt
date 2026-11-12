@@ -1,0 +1,37 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> trouve-ton-artisan@1.0.0 test
+> node --test tests/*.test.js
+
+✔ API privée : refuse les visiteurs sans clé (63.439595ms)
+✔ API privée : refuse une mauvaise clé (19.090066ms)
+✔ Clé multioctet : refus propre, sans exception (0.391984ms)
+✔ Catégories issues du dépôt de données (8.250386ms)
+✔ API en lecture seule : POST refusé (24.633549ms)
+✔ Identifiant invalide : 400 (9.500621ms)
+Gateway error: Error
+✔ Artisan absent : 404 (15.705479ms)
+✔ Validation : catégories, pagination et paramètres inconnus (5.483667ms)
+✔ Liste publique : aucune adresse e-mail (16.778864ms)
+✔ Fiche publique : aucune adresse e-mail (112.161251ms)
+✔ Contact : destinataire imposé par la base et Reply-To visiteur (142.84711ms)
+✔ Contact : origine étrangère refusée (19.853005ms)
+✔ Contact : pas de destinataire arbitraire (40.148319ms)
+✔ Contact : injection en-tête refusée (63.96241ms)
+✔ Contact : champ piège refuse le robot (26.650173ms)
+Gateway error: Error
+✔ Contact : panne SMTP sans faux succès (16.143224ms)
+✔ Contact : limitation après 5 messages (87.404881ms)
+Gateway error: SyntaxError
+✔ JSON malformé : 400 (18.539755ms)
+✔ En-têtes de protection présents (26.970761ms)
+✔ Route inconnue : statut HTTP 404 et application (29.672003ms)
+✔ Route connue en accès direct : HTML (22.360425ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1399.849744

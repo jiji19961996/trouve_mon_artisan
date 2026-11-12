@@ -1,0 +1,26 @@
+CREATE DATABASE IF NOT EXISTS artisans CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE artisans;
+CREATE TABLE categories (
+ id INT PRIMARY KEY AUTO_INCREMENT,
+ name VARCHAR(80) NOT NULL UNIQUE
+);
+CREATE TABLE specialties (
+ id INT PRIMARY KEY AUTO_INCREMENT,
+ name VARCHAR(100) NOT NULL UNIQUE,
+ category_id INT NOT NULL,
+ FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE RESTRICT
+);
+CREATE TABLE artisans (
+ id INT PRIMARY KEY AUTO_INCREMENT,
+ name VARCHAR(150) NOT NULL,
+ rating DECIMAL(2,1) NOT NULL CHECK (rating BETWEEN 0 AND 5),
+ city VARCHAR(100) NOT NULL,
+ about TEXT NOT NULL,
+ email VARCHAR(254) NOT NULL,
+ website VARCHAR(500) NULL,
+ image VARCHAR(500) NOT NULL DEFAULT '/artisan.svg',
+ featured BOOLEAN NOT NULL DEFAULT FALSE,
+ specialty_id INT NOT NULL,
+ FOREIGN KEY (specialty_id) REFERENCES specialties(id) ON DELETE RESTRICT,
+ INDEX idx_name(name), INDEX idx_featured(featured)
+);
